@@ -13,6 +13,9 @@ public class Page {
     LoginPage loginPage = new LoginPage(this);
     protected LoginPage getLoginPage(){return loginPage;}
 
+    FbLoginPage fbLoginPage = new FbLoginPage(this);
+    protected FbLoginPage getFbLoginPage(){return fbLoginPage;}
+
     SignupPage signupPage = new SignupPage(this);
     protected SignupPage getSignupPage(){return signupPage;}
 }

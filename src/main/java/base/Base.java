@@ -20,4 +20,12 @@ public class Base extends Page {
         driver.get(properties.getProperty("weburl"));
         driver.manage().window().maximize();
     }
+
+    @Before("@fblogin")
+    public void startFbLoginTest(){
+        WebConnector connector = new WebConnector();
+        driver = connector.openBrowser();
+        driver.get(properties.getProperty("weburl"));
+        driver.manage().window().maximize();
+    }
 }
