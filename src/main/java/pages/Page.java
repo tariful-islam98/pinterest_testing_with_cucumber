@@ -18,4 +18,7 @@ public class Page {
 
     SignupPage signupPage = new SignupPage(this);
     protected SignupPage getSignupPage(){return signupPage;}
+
+    FbSignupPage fbSignupPage = new FbSignupPage(this);
+    protected FbSignupPage getFbSignupPage(){return fbSignupPage;}
 }
