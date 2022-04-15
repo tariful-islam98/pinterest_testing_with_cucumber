@@ -12,4 +12,12 @@ public class Base extends Page {
         driver.get(properties.getProperty("weburl"));
         driver.manage().window().maximize();
     }
+
+    @Before("@signup")
+    public void startSignupTest(){
+        WebConnector connector = new WebConnector();
+        driver = connector.openBrowser();
+        driver.get(properties.getProperty("weburl"));
+        driver.manage().window().maximize();
+    }
 }

@@ -12,4 +12,7 @@ public class Page {
 
     LoginPage loginPage = new LoginPage(this);
     protected LoginPage getLoginPage(){return loginPage;}
+
+    SignupPage signupPage = new SignupPage(this);
+    protected SignupPage getSignupPage(){return signupPage;}
 }
