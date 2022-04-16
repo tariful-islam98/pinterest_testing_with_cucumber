@@ -24,4 +24,11 @@ public class Page {
 
     SearchPage searchPage = new SearchPage(this);
     protected SearchPage getSearchPage(){return searchPage;}
+
+    NotificationPage notificationPage = new NotificationPage(this);
+    protected NotificationPage getNotificationPage(){return notificationPage;}
+
+    public String currentUrl(){
+        return driver.getCurrentUrl();
+    }
 }

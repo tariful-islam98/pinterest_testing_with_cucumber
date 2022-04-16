@@ -6,20 +6,7 @@ import io.cucumber.java.en.*;
 
 public class SearchingSteps extends Page {
 
-    @Given("User is logged in with {string} and {string}")
-    public void userIsLoggedInWithAnd(String email, String password) {
-        getSearchPage().clickLoginBtn();
-        getSearchPage().setUserEmail(email);
-        getSearchPage().setPassword(password);
-        getSearchPage().clickLogin();
-    }
-
-    @And("User is in Home Page")
-    public void userIsInHomePage() {
-        getSearchPage().loadHomePage();
-    }
-
-    @When("User clicks search box")
+    @Given("User clicks search box")
     public void userClicksSearchBox() {
         getSearchPage().clickSearchBox();
     }
