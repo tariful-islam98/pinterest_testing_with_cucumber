@@ -31,6 +31,9 @@ public class Page {
     InboxPage inboxPage = new InboxPage(this);
     protected InboxPage getInboxPage(){return inboxPage;}
 
+    ProfileEditPage editPage = new ProfileEditPage(this);
+    protected ProfileEditPage getEditPage(){return editPage;}
+
     public String currentUrl(){
         return driver.getCurrentUrl();
     }
