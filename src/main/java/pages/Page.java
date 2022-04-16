@@ -21,4 +21,7 @@ public class Page {
 
     FbSignupPage fbSignupPage = new FbSignupPage(this);
     protected FbSignupPage getFbSignupPage(){return fbSignupPage;}
+
+    SearchPage searchPage = new SearchPage(this);
+    protected SearchPage getSearchPage(){return searchPage;}
 }

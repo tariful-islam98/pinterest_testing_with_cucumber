@@ -8,16 +8,17 @@ import java.time.Duration;
 
 import static core.WebConnector.driver;
 
-public class FbLoginPage {
+public class FbLoginPage extends LoginPage {
     private By loginBtnPath = By.xpath("//div[@data-test-id=\"simple-login-button\"]/button");//get login button
     private By fbLoginBtnPath = By.xpath("//div[@data-test-id = \"facebook-connect-button\"]/button");
 
     public FbLoginPage(Page page) {
+        super(page);
     }
 
-    public void clickLoginButton(){
-        driver.findElement(loginBtnPath).click();
-    }
+//    public void clickLoginButton(){
+//        driver.findElement(loginBtnPath).click();
+//    }
 
     public void clickFbLoginBtn(){
         driver.findElement(fbLoginBtnPath).click();

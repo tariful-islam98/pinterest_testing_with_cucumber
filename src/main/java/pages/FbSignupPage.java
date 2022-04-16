@@ -8,16 +8,17 @@ import java.time.Duration;
 
 import static core.WebConnector.driver;
 
-public class FbSignupPage {
+public class FbSignupPage extends SignupPage{
     private By signupBtnPath = By.xpath("//div[@data-test-id=\"simple-signup-button\"]/button");//get signup button
     private By fbSignupBtnPath = By.xpath("//div[@data-test-id = \"facebook-connect-button\"]/button");
 
     public FbSignupPage(Page page) {
+        super(page);
     }
 
-    public void clickSignupPage2(){
-        driver.findElement(signupBtnPath).click();
-    }
+//    public void clickSignupPage2(){
+//        driver.findElement(signupBtnPath).click();
+//    }
 
     public void clickFbBtn2(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

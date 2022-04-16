@@ -8,7 +8,7 @@ import io.cucumber.java.en.*;
 public class FbSignupSteps extends Page {
     @Given("user is in Signup page")
     public void user_is_in_Signup_page(){
-        getFbSignupPage().clickSignupPage2();
+        getFbSignupPage().clickSignup();
     }
 
     @When("User clicks continue with facebook button")

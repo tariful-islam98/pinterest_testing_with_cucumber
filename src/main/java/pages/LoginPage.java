@@ -33,7 +33,7 @@ public class LoginPage {
     /**
      * TC_2.1
      * login with email and password
-     * @return to Home Page
+     * load Home Page
      */
     public void clickLogin() {
         driver.findElement(loginBtnPath).click();

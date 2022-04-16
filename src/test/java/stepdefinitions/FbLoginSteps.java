@@ -7,7 +7,7 @@ import pages.Page;
 public class FbLoginSteps extends Page {
     @Given("user is in Login page")
     public void user_is_in_Login_page(){
-        getFbLoginPage().clickLoginButton();
+        getFbLoginPage().clickLoginBtn();
     }
 
     @When("user clicks continue with facebook button")
