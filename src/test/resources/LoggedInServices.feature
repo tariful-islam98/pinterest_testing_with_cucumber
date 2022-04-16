@@ -6,11 +6,11 @@ Feature: Different services
     And clicks Login Button
     Then Home Page is Visible
 
-    @login
-    Scenario: Notification
-      Given user clicks notification icon
-      And selects a notification
-      Then notification detail page loaded
+  @login
+  Scenario: Notification
+    Given user clicks notification icon
+    And selects a notification
+    Then notification detail page loaded
 
   @login
   Scenario Outline: User Searches a topic
@@ -20,5 +20,19 @@ Feature: Different services
     Then System shows the result page
 
     Examples:
-      | topic |
+      | topic   |
       | cricket |
+
+  @login
+  Scenario Outline: user sends message
+    Given User clicks message icon
+    And user clicks new message button
+    When user enters "<email>"
+    And selects an email
+    And types "<message>"
+    And clicks send
+    Then message is sent
+
+    Examples:
+      | email                | message |
+      | abir0dhaka@gmail.com | Hello   |

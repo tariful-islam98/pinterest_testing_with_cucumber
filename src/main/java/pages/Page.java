@@ -28,6 +28,9 @@ public class Page {
     NotificationPage notificationPage = new NotificationPage(this);
     protected NotificationPage getNotificationPage(){return notificationPage;}
 
+    InboxPage inboxPage = new InboxPage(this);
+    protected InboxPage getInboxPage(){return inboxPage;}
+
     public String currentUrl(){
         return driver.getCurrentUrl();
     }
