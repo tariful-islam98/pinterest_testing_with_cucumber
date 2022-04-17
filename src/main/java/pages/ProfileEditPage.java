@@ -36,8 +36,9 @@ public class ProfileEditPage {
     }
 
     public void enterLastName(String lastname){
+        String temp = getLastName()+lastname;
         driver.findElement(lastNameInputField).sendKeys(Keys.CONTROL, "a", Keys.BACK_SPACE);
-        driver.findElement(lastNameInputField).sendKeys(lastname);
+        driver.findElement(lastNameInputField).sendKeys(temp);
     }
 
     public void clickSaveButton(){
@@ -50,5 +51,12 @@ public class ProfileEditPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(toastDiv));
         return driver.findElement(toastDiv).isDisplayed();
+    }
+
+    public String getLastName(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameInputField));
+
+        return driver.findElement(lastNameInputField).getAttribute("value");
     }
 }

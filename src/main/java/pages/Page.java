@@ -34,6 +34,15 @@ public class Page {
     ProfileEditPage editPage = new ProfileEditPage(this);
     protected ProfileEditPage getEditPage(){return editPage;}
 
+    ProfileSharePage sharePage = new ProfileSharePage(this);
+    protected ProfileSharePage getSharePage(){return sharePage;}
+
+    ShareWithFbPage withFbPage = new ShareWithFbPage(this);
+    protected ShareWithFbPage getWithFbPage(){return withFbPage;}
+
+    ShareWithTwitterPage twitterPage = new ShareWithTwitterPage(this);
+    protected ShareWithTwitterPage getTwitterPage(){return twitterPage;}
+
     public String currentUrl(){
         return driver.getCurrentUrl();
     }

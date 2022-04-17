@@ -12,7 +12,7 @@ public class BackgroundSteps extends Page {
 
     @When("User Enters Email and Password")
     public void userEntersEmailAndPassword() {
-        getLoginPage().setUserEmail("vespimerka6@vusra.com");
+        getLoginPage().setUserEmail("vespimerka3@vusra.com");
         getLoginPage().setPassword("121212A");
     }
 

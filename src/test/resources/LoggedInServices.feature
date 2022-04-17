@@ -40,7 +40,7 @@ Feature: Different services
       | email                | message |
       | abir0dhaka@gmail.com | Hello   |
 
-  #TC_4.6
+  #TC_4.6.1
   @login
   Scenario Outline: user updates profile
     Given User clicks profile icon
@@ -53,3 +53,34 @@ Feature: Different services
     Examples:
       | lastname |
       | A        |
+
+
+  #TC_4.6.2
+  Rule: User shares Profile
+    Background:
+      Given user clicks profile icon
+      And clicks share button
+      Then Share modal is displayed
+
+    @login
+    Scenario Outline: user shares profile
+      Given user clicks email input field
+      And types the "<email>" address
+      And selects contact to share
+      And writes "<message>" to share
+      And clicks send button
+      Then user is returned to share modal
+
+      Examples:
+        | email                | message |
+        | abir0dhaka@gmail.com | Hello   |
+
+    @login
+    Scenario: Share profile using Facebook
+      Given user clicks Fb button
+      Then Fb window is opened
+
+    @login
+    Scenario: Share profile using Twitter
+      Given user clicks Twitter button
+      Then Twitter window is opened
